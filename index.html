@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="WebRTC">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+
+  <title>Audio Transcript</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Roboto;
+      font-size: 18px;
+    }
+
+    button#control {
+      padding: 10px 30px;
+      border: 0;
+      /* background: rgba(0, 155, 0); */
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.4s ease-in-out;
+    }
+
+    button.start {
+      background: rgba(0, 155, 0);
+    }
+
+    button.stop {
+      background: rgba(155, 155, 155);
+    }
+
+    .output {
+      padding: 10px;
+      border-radius: 5px;
+      background: #eeeeee;
+      color: #666666;
+    }
+
+    .output-final {
+      padding: 10px;
+      border-radius: 5px;
+      background: #ffffff;
+      color: #000000;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <button id="control" class="start">Start</button>
+    <div class="output"></div>
+    <div class="output-final"></div>
+    <!-- <audio id="gum-local" controls autoplay></audio> -->
+  </div>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
